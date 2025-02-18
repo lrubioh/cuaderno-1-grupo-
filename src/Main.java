@@ -1,28 +1,36 @@
-//importo la clase InvoiceItem
+//importo la clase Account
 
-import es.uah.matcomp.mp.e1.ejerciciosclases.e5.InvoiceItem;
+import es.uah.matcomp.mp.e1.ejerciciosclases.e6.Account;
 public class Main {
     public static void main(String[] args) {
-        //creo un nuevo empleado y la imprimo con el toString
-        InvoiceItem inv1 = new InvoiceItem("A101", "Pen Red", 888, 0.08);
-        System.out.println(inv1);
-        //la da el valor 999 al Qty del inv1
-        inv1.setQty(999);
-        //le da valor al unitprice
-        inv1.setUnitPrice(0.99);
-        //devuelve el inv1 con el metodoo toString
-        System.out.println(inv1);
-        //devuelve el id
-        System.out.println("id is: " + inv1.getId());
-        //devuelve el descuento
-        System.out.println("desc is: " + inv1.getDesc());
-        // devuelve la cantidad
-        System.out.println("qty is: " + inv1.getQty());
-        //devuelve el unitprice
-        System.out.println("unitPrice is: " + inv1.getUnitPrice());
-        //me devuelve el total
-        System.out.println("The total is: " + inv1.getTotal());
+        //creo dos nuevas cuentas la primera introduciendo todos lo datos y la segunda con el valor del dinero por defecto
+        //y las devuelvo por pantalla con el metodo toString
+        Account a1 = new Account("A101", "Tan Ah Teck", 88);
+        System.out.println(a1);
+        Account a2 = new Account("A102", "Kumar");
+        System.out.println(a2);
+
+        //devuelvo el id
+        System.out.println("ID: " + a1.getID());
+        //devuelvo el nombre
+        System.out.println("Name: " + a1.getName());
+        //devuelvo el dinero que hay en la cuenta
+        System.out.println("Balance: " + a1.getBalance());
+        //ingreso dinero a la cuenta e imprimo el nuevo total
+        a1.credit(100);
+        System.out.println(a1);
+        //saco dinero de la cuenta y devuelvo cuanto queda (habiendo sufiicente dinero)
+        a1.debit(50);
+        System.out.println(a1);
+        //saco dinero de la cuenta y devuelvo cuanto queda (sin haber sufiicente dinero)
+        a1.debit(500);
+        System.out.println(a1);
+        //pruebo a transferir dinero a otra cuenta y devuelvo el nuevo total del las dos
+        a1.transferTo(a2, 100);
+        System.out.println(a1);
+        System.out.println(a2);
     }
+
 
 }
 
