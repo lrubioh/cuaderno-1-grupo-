@@ -1,23 +1,29 @@
-//importo la clase Date
+    //importo la clase Time
 
-import es.uah.matcomp.mp.e1.ejerciciosclases.e7.Date;
+import es.uah.matcomp.mp.e1.ejerciciosclases.e8.Time;
 public class Main {
     public static void main(String[] args) {
-        //creo una nueva fecha y la devuelvo con el toString
-        Date d1 = new Date(1, 2, 2014);
-        System.out.println(d1);
-        //doy malor al mes dia y año y los devuelvo con el toString
-        d1.setMonth(12);
-        d1.setDay(9);
-        d1.setYear(2099);
-        System.out.println(d1);
-        //devuelvo los valores del mes dia y año por separado
-        System.out.println("Month: " + d1.getMonth());
-        System.out.println("Day: " + d1.getDay());
-        System.out.println("Year: " + d1.getYear());
-        //doy valor a una fecha completa y le devuelvo con el metodo toString
-        d1.setDate(3, 4, 2016);
-        System.out.println(d1);
+        //creo una nueva hora y la devuelvo con el toString
+        Time t1 = new Time(1, 2, 3);
+        System.out.println(t1);
+        //doy valor a la hora, minuto , segundo por separado y lo devuelvo con el toString
+        t1.setHour(4);
+        t1.setMinute(5);
+        t1.setSecond(6);
+        System.out.println(t1);
+        //devuelvo las horas minutos y segundos
+        System.out.println("Hour: " + t1.getHour());
+        System.out.println("Minute: " + t1.getMinute());
+        System.out.println("Second: " + t1.getSecond());
+        //doy valor a las horas minutos y segundos
+        t1.setTime(23, 59, 58);
+        System.out.println(t1);
+        //calculo el siguiente segundo con el metodo nextSecond
+        System.out.println(t1.nextSecond());
+        System.out.println(t1.nextSecond().nextSecond());
+        //calculo el anterior segundo con el metodo previousSecond
+        System.out.println(t1.previousSecond());
+        System.out.println(t1.previousSecond().previousSecond());
     }
 
 
