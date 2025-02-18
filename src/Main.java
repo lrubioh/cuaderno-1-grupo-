@@ -1,29 +1,28 @@
-//importo la clase Employee
+//importo la clase InvoiceItem
 
-import es.uah.matcomp.mp.e1.ejerciciosclases.e4.Employee;
+import es.uah.matcomp.mp.e1.ejerciciosclases.e5.InvoiceItem;
 public class Main {
     public static void main(String[] args) {
-        //creo mi empleado 1 y lo muesto por pantalla con el metodo toString
-        Employee e1 = new Employee(8, "Peter", "Tan", 2500);
-        System.out.println(e1);
-        //pruebo la funcion setSalary y la muestro con el toString
-        e1.setSalary(999);
-        System.out.println(e1);
-        //devuelvo el id de mi empleado con el metodo getId
-        System.out.println("id is: " + e1.getId());
-        //devuelvo el nombre del empleado con el metodo getFirstName
-        System.out.println("firstname is: " + e1.getFirstName());
-        //devuelvo el apellido del empleado con el metodo getLastName
-        System.out.println("lastname is: " + e1.getLastName());
-        //devuelvo el salary del empleado con el metodo getSalary
-        System.out.println("salary is: " + e1.getSalary());
-        //devuelvo el nombre completo nombre y apellidos con el metodo getName
-        System.out.println("name is: " + e1.getName());
-        //devuelvo el salary anual con el metodo getAnnualSalary
-        System.out.println("annual salary is: " + e1.getAnnualSalary());
-        //pruebo el metodo raiseSalary y lo muestro por pantalla
-        System.out.println(e1.raiseSalary(10));
-        System.out.println(e1);
+        //creo un nuevo empleado y la imprimo con el toString
+        InvoiceItem inv1 = new InvoiceItem("A101", "Pen Red", 888, 0.08);
+        System.out.println(inv1);
+        //la da el valor 999 al Qty del inv1
+        inv1.setQty(999);
+        //le da valor al unitprice
+        inv1.setUnitPrice(0.99);
+        //devuelve el inv1 con el metodoo toString
+        System.out.println(inv1);
+        //devuelve el id
+        System.out.println("id is: " + inv1.getId());
+        //devuelve el descuento
+        System.out.println("desc is: " + inv1.getDesc());
+        // devuelve la cantidad
+        System.out.println("qty is: " + inv1.getQty());
+        //devuelve el unitprice
+        System.out.println("unitPrice is: " + inv1.getUnitPrice());
+        //me devuelve el total
+        System.out.println("The total is: " + inv1.getTotal());
     }
+
 }
 
