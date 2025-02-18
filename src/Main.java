@@ -1,32 +1,44 @@
-    //importo la clase Time
+//importo la clase Ball
 
-import es.uah.matcomp.mp.e1.ejerciciosclases.e8.Time;
+import es.uah.matcomp.mp.e1.ejerciciosclases.e9.Ball;
 public class Main {
     public static void main(String[] args) {
-        //creo una nueva hora y la devuelvo con el toString
-        Time t1 = new Time(1, 2, 3);
-        System.out.println(t1);
-        //doy valor a la hora, minuto , segundo por separado y lo devuelvo con el toString
-        t1.setHour(4);
-        t1.setMinute(5);
-        t1.setSecond(6);
-        System.out.println(t1);
-        //devuelvo las horas minutos y segundos
-        System.out.println("Hour: " + t1.getHour());
-        System.out.println("Minute: " + t1.getMinute());
-        System.out.println("Second: " + t1.getSecond());
-        //doy valor a las horas minutos y segundos
-        t1.setTime(23, 59, 58);
-        System.out.println(t1);
-        //calculo el siguiente segundo con el metodo nextSecond
-        System.out.println(t1.nextSecond());
-        System.out.println(t1.nextSecond().nextSecond());
-        //calculo el anterior segundo con el metodo previousSecond
-        System.out.println(t1.previousSecond());
-        System.out.println(t1.previousSecond().previousSecond());
+        //creo una bola y la devuelvo con el toString
+        Ball ball = new Ball(1.1f, 2.2f, 10, 3.3f, 4.4f);
+        System.out.println(ball);
+        //doy valor a x, y , radio, Xdelta, YDelta y los devuelvo con el metodo toString
+        ball.setX(80.0f);
+        ball.setY(35.0f);
+        ball.setRadius(5);
+        ball.setXDelta(4.0f);
+        ball.setYDelta(6.0f);
+        System.out.println(ball);
+        //devuelvo los valores del x, y, radio, XDelta y del YDelta
+        System.out.println("x is: " + ball.getX());
+        System.out.println("y is: " + ball.getY());
+        System.out.println("radius is: " + ball.getRadius());
+        System.out.println("xDelta is: " + ball.getXDelta());
+        System.out.println("yDelta is: " + ball.getYDelta());
+        //pruebo el move
+        float xMin = 0.0f;
+        float xMax = 100.0f;
+        float yMin = 0.0f;
+        float yMax = 50.0f;
+        for (int i = 0; i < 15; i++) {
+            ball.move();
+            System.out.println(ball);
+            float xNew = ball.getX();
+            float yNew = ball.getY();
+            int radius = ball.getRadius();
+            //
+            if ((xNew + radius) > xMax || (xNew - radius) < xMin) {
+                ball.reflectHorizontal();
+            }
+            if ((yNew + radius) > yMax || (yNew - radius) < yMin) {
+                ball.reflectVertical();
+            }
+        }
     }
-
-
 
 }
 
