@@ -1,23 +1,29 @@
-//importo la clase circulo
-import es.uah.matcomp.mp.e1.ejerciciosclases.e2.Circle;
+//importo la clase Rectangle
 
-public class Main { // Save as "TestCircle.java"
-    public static void main(String[] args) {
-        // creo dos nuevos circulos para probar el to String de forma implicita
-        Circle c1 = new Circle(1.1);
-        System.out.println(c1);
-        Circle c2 = new Circle(); // default constructor
-        System.out.println(c2);
-        //uso la funcion set para cambiar el radio del circulo c1
-        c1.setRadius(2.2);
-        //imprimo el circulo c1 con el toString
-        System.out.println(c1); // toString()
-        //imprimo el radio del circulo atraves de la función getRadius
-        System.out.println("radius is: " + c1.getRadius());
-        //pruebo las funciones getArea y getCircumference
-        System.out.printf("area is: %.2f%n", c1.getArea());
-        System.out.printf("circumference is: %.2f%n", c1.getCircumference());
-
-
+import es.uah.matcomp.mp.e1.ejerciciosclases.e3.Rectangle;
+//creo un main para probar los metodos y atrivutos
+public class Main {
+        public static void main(String[] args) {
+            //creo un rectangulo con las medidas de largo y  ancho que yo quiera
+            Rectangle r1 = new Rectangle(1.2f, 3.4f);
+            //imprimo el rectangulo con el metodo toString()
+            System.out.println(r1);
+            //creo un nuevo rectángulo con el metodo por defecto
+            Rectangle r2 = new Rectangle();
+            //imprimo el rectangulo r2
+            System.out.println(r2);
+            //pruebo a cambiar el largo y ancho por separado del rectangulo r1 con las funciones
+            // setLength y setWidth
+            r1.setLength(5.6f);
+            r1.setWidth(7.8f);
+            //imprimo el r1 con sus cambios y atarves del metodo toString
+            System.out.println(r1);
+            //imprimo el largo del rectangulo con la funcion getLength
+            System.out.println("length is: " + r1.getLength());
+            //imprimo el ancho del rectangulo con la funcion getWidth
+            System.out.println("width is: " + r1.getWidth());
+            //pruebo las funciones getArea y getPerimeter
+            System.out.printf("area is: %.2f%n", r1.getArea());
+            System.out.printf("perimeter is: %.2f%n", r1.getPerimeter());
+        }
     }
-}
