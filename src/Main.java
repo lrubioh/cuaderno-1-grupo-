@@ -1,29 +1,29 @@
-//importo la clase Rectangle
+//importo la clase Employee
 
-import es.uah.matcomp.mp.e1.ejerciciosclases.e3.Rectangle;
-//creo un main para probar los metodos y atrivutos
+import es.uah.matcomp.mp.e1.ejerciciosclases.e4.Employee;
 public class Main {
-        public static void main(String[] args) {
-            //creo un rectangulo con las medidas de largo y  ancho que yo quiera
-            Rectangle r1 = new Rectangle(1.2f, 3.4f);
-            //imprimo el rectangulo con el metodo toString()
-            System.out.println(r1);
-            //creo un nuevo rectángulo con el metodo por defecto
-            Rectangle r2 = new Rectangle();
-            //imprimo el rectangulo r2
-            System.out.println(r2);
-            //pruebo a cambiar el largo y ancho por separado del rectangulo r1 con las funciones
-            // setLength y setWidth
-            r1.setLength(5.6f);
-            r1.setWidth(7.8f);
-            //imprimo el r1 con sus cambios y atarves del metodo toString
-            System.out.println(r1);
-            //imprimo el largo del rectangulo con la funcion getLength
-            System.out.println("length is: " + r1.getLength());
-            //imprimo el ancho del rectangulo con la funcion getWidth
-            System.out.println("width is: " + r1.getWidth());
-            //pruebo las funciones getArea y getPerimeter
-            System.out.printf("area is: %.2f%n", r1.getArea());
-            System.out.printf("perimeter is: %.2f%n", r1.getPerimeter());
-        }
+    public static void main(String[] args) {
+        //creo mi empleado 1 y lo muesto por pantalla con el metodo toString
+        Employee e1 = new Employee(8, "Peter", "Tan", 2500);
+        System.out.println(e1);
+        //pruebo la funcion setSalary y la muestro con el toString
+        e1.setSalary(999);
+        System.out.println(e1);
+        //devuelvo el id de mi empleado con el metodo getId
+        System.out.println("id is: " + e1.getId());
+        //devuelvo el nombre del empleado con el metodo getFirstName
+        System.out.println("firstname is: " + e1.getFirstName());
+        //devuelvo el apellido del empleado con el metodo getLastName
+        System.out.println("lastname is: " + e1.getLastName());
+        //devuelvo el salary del empleado con el metodo getSalary
+        System.out.println("salary is: " + e1.getSalary());
+        //devuelvo el nombre completo nombre y apellidos con el metodo getName
+        System.out.println("name is: " + e1.getName());
+        //devuelvo el salary anual con el metodo getAnnualSalary
+        System.out.println("annual salary is: " + e1.getAnnualSalary());
+        //pruebo el metodo raiseSalary y lo muestro por pantalla
+        System.out.println(e1.raiseSalary(10));
+        System.out.println(e1);
     }
+}
+
