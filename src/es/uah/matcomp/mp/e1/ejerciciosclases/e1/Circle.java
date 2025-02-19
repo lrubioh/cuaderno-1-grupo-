@@ -1,7 +1,7 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.e1;
 
 public class Circle {
-        //DECLARO LOS ATRIVUTOS PRIVADOS
+        //DECLARO LOS ATRIBUTOS PRIVADOS
         private double radius;
         private String color;
 

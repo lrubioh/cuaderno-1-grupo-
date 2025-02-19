@@ -1,8 +1,8 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.e3;
-//creo la clase rectangle con sus metodos y atrivutos
+//creo la clase rectangle con sus metodos y atributos
 public class Rectangle {
-    /**ATRIVUTOS**/
-    //creo los atrivutos privados largo(lenght) y ancho(width)
+    /**ATRIBUTOS**/
+    //creo los atributos privados largo(lenght) y ancho(width)
     private float length;
     private float width;
     /**METODOS**/

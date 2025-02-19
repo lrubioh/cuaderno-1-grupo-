@@ -1,8 +1,8 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.e9;
 
 public class Ball {
-    /**ATRIVUTOS**/
-    //private classes, declaro las variables que voy a usar luego
+    /**ATRIBUTOS**/
+    //private clases, declaro las variables que voy a usar luego
     private float x;
     private float y;
     private int radius;

@@ -1,7 +1,7 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.e5;
 
 public class InvoiceItem {
-    /**ATRIVUTOS**/
+    /**ATRIBUTOS**/
     private String id;
     private String desc;
     private int qty;

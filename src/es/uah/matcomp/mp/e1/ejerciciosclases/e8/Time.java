@@ -1,7 +1,7 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.e8;
 
 public class Time {
-    /**ATRIVUTOS**/
+    /**ATRIBUTOS**/
     private int hour;
     private int minute;
     private int second;

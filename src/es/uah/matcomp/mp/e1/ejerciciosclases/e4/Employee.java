@@ -1,7 +1,7 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.e4;
 
 public class Employee {
-    /**ATRIVUTOS**/
+    /**ATRIBUTOS**/
     private int id;
     private String firstName;
     private String lastName;

@@ -1,7 +1,7 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.e6;
 
 public class Account {
-    /**ATRIVUTOS**/
+    /**ATRIBUTOS**/
     private String id;
     private String name;
     private int balance;

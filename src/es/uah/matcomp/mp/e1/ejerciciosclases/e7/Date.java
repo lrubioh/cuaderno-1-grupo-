@@ -1,7 +1,7 @@
 package es.uah.matcomp.mp.e1.ejerciciosclases.e7;
 
 public class Date {
-    /**ATRIVUTOS**/
+    /**ATRIBUTOS**/
     private int day;
     private int month;
     private int year;

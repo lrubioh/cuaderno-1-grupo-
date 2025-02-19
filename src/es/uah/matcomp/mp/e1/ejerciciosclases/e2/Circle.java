@@ -2,7 +2,7 @@ package es.uah.matcomp.mp.e1.ejerciciosclases.e2;
 
 //declaro la clase Circulo
 public class Circle {
-    //declaro los atrivutos privados que luego usare para las funciones
+    //declaro los atributos privados que luego usare para las funciones
     private double radius;
 
     /** METODOS **/
@@ -28,7 +28,7 @@ public class Circle {
         this.radius = radius;
     }
 
-    //con este metodo calculo el area de mi circulo a atraves de la formula
+    //con este metodo calculo el area de mi circulo a a traves de la formula
     public double getArea(){
 
         return Math.PI * radius * radius;
@@ -40,7 +40,7 @@ public class Circle {
         return 2 * Math.PI * radius;
     }
 
-    //me imprime el circulo con su radio lo puedo llamar de forma impplicita o explicita
+    //me imprime el circulo con su radio lo puedo llamar de forma implicita o explicita
     @Override
     public String toString() {
 
