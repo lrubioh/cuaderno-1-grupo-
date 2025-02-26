@@ -1,33 +1,39 @@
-import es.uah.matcomp.mp.e3.ejerciciosclases.e2.Person;
-import es.uah.matcomp.mp.e3.ejerciciosclases.e2.Student;
-import es.uah.matcomp.mp.e3.ejerciciosclases.e2.Staff;
+import es.uah.matcomp.mp.e3.ejerciciosclases.e3.Point2D;
+import es.uah.matcomp.mp.e3.ejerciciosclases.e3.Point3D;
 
 public class Main {
     public static void main(String[] args) {
-        // Crear un objeto de la clase Person
-        Person person = new Person("Juan Perez", "Av. Siempre Viva 123");
-        System.out.println(person); // Se llama a toString()
+        // Crear un objeto de la clase Point2D
+        Point2D point2D = new Point2D(1.5f, 2.5f);
+        System.out.println("Punto 2D: " + point2D); // Se llama a toString()
 
-        // Crear un objeto de la clase Student
-        Student student = new Student("Maria Gomez", "Calle Falsa 456", "Ingeniería", 2, 1500.50);
-        System.out.println(student); // Se llama a toString()
+        // Obtener y mostrar coordenadas
+        System.out.println("X: " + point2D.getX());
+        System.out.println("Y: " + point2D.getY());
 
-        // Modificar valores del estudiante
-        student.setProgram("Matemáticas");
-        student.setYear(3);
-        student.setFee(2000.75);
-        System.out.println("Programa actualizado: " + student.getProgram());
-        System.out.println("Año actualizado: " + student.getYear());
-        System.out.println("Cuota actualizada: " + student.getFee());
+        // Modificar coordenadas
+        point2D.setXY(3.0f, 4.0f);
+        System.out.println("Nuevo Punto 2D: " + point2D);
 
-        // Crear un objeto de la clase Staff
-        Staff staff = new Staff("Carlos Ruiz", "Paseo del Prado 789", "Escuela Primaria", 2500.00);
-        System.out.println(staff); // Se llama a toString()
+        // Obtener coordenadas como array
+        float[] coords2D = point2D.getXY();
+        System.out.println("Coordenadas del Punto 2D: (" + coords2D[0] + ", " + coords2D[1] + ")");
 
-        // Modificar valores del staff
-        staff.setSchool("Colegio Nacional");
-        staff.setPay(3000.25);
-        System.out.println("Escuela actualizada: " + staff.getSchool());
-        System.out.println("Pago actualizado: " + staff.getPay());
+        // Crear un objeto de la clase Point3D
+        Point3D point3D = new Point3D(1.0f, 2.0f, 3.0f);
+        System.out.println("Punto 3D: " + point3D); // Se llama a toString()
+
+        // Obtener y mostrar coordenadas
+        System.out.println("X: " + point3D.getX());
+        System.out.println("Y: " + point3D.getY());
+        System.out.println("Z: " + point3D.getZ());
+
+        // Modificar coordenadas
+        point3D.setXYZ(4.0f, 5.0f, 6.0f);
+        System.out.println("Nuevo Punto 3D: " + point3D);
+
+        // Obtener coordenadas como array
+        float[] coords3D = point3D.getXYZ();
+        System.out.println("Coordenadas del Punto 3D: (" + coords3D[0] + ", " + coords3D[1] + ", " + coords3D[2] + ")");
     }
 }
