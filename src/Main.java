@@ -1,32 +1,33 @@
-import es.uah.matcomp.mp.e3.ejerciciosclases.e1.Cylinder;
+import es.uah.matcomp.mp.e3.ejerciciosclases.e2.Person;
+import es.uah.matcomp.mp.e3.ejerciciosclases.e2.Student;
+import es.uah.matcomp.mp.e3.ejerciciosclases.e2.Staff;
 
-public class Main { // save as "TestCylinder.java"
-    public static void main (String[] args) {
-        // Declare and allocate a new instance of cylinder
-        // with default color, radius, and height
-        Cylinder c1 = new Cylinder();
-        System.out.println("Cylinder:"
-                + " radius=" + c1.getRadius()
-                + " height=" + c1.getHeight()
-                + " base area=" + c1.getArea()
-                + " volume=" + c1.getVolume());
+public class Main {
+    public static void main(String[] args) {
+        // Crear un objeto de la clase Person
+        Person person = new Person("Juan Perez", "Av. Siempre Viva 123");
+        System.out.println(person); // Se llama a toString()
 
-        // Declare and allocate a new instance of cylinder
-        // specifying height, with default color and radius
-        Cylinder c2 = new Cylinder(10.0);
-        System.out.println("Cylinder:"
-                + " radius=" + c2.getRadius()
-                + " height=" + c2.getHeight()
-                + " base area=" + c2.getArea()
-                + " volume=" + c2.getVolume());
+        // Crear un objeto de la clase Student
+        Student student = new Student("Maria Gomez", "Calle Falsa 456", "Ingeniería", 2, 1500.50);
+        System.out.println(student); // Se llama a toString()
 
-        // Declare and allocate a new instance of cylinder
-        // specifying radius and height, with default color
-        Cylinder c3 = new Cylinder(2.0, 10.0);
-        System.out.println("Cylinder:"
-                + " radius=" + c3.getRadius()
-                + " height=" + c3.getHeight()
-                + " base area=" + c3.getArea()
-                + " volume=" + c3.getVolume());
+        // Modificar valores del estudiante
+        student.setProgram("Matemáticas");
+        student.setYear(3);
+        student.setFee(2000.75);
+        System.out.println("Programa actualizado: " + student.getProgram());
+        System.out.println("Año actualizado: " + student.getYear());
+        System.out.println("Cuota actualizada: " + student.getFee());
+
+        // Crear un objeto de la clase Staff
+        Staff staff = new Staff("Carlos Ruiz", "Paseo del Prado 789", "Escuela Primaria", 2500.00);
+        System.out.println(staff); // Se llama a toString()
+
+        // Modificar valores del staff
+        staff.setSchool("Colegio Nacional");
+        staff.setPay(3000.25);
+        System.out.println("Escuela actualizada: " + staff.getSchool());
+        System.out.println("Pago actualizado: " + staff.getPay());
     }
 }
