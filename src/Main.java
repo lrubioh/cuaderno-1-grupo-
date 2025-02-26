@@ -1,28 +1,20 @@
-import es.uah.matcomp.mp.e3.ejerciciosclases.e6.Animal;
-import es.uah.matcomp.mp.e3.ejerciciosclases.e6.Mammal;
-import es.uah.matcomp.mp.e3.ejerciciosclases.e6.Cat;
-import es.uah.matcomp.mp.e3.ejerciciosclases.e6.Dog ;
+import es.uah.matcomp.mp.e3.ejerciciosclases.e8.Cylinder;
+import es.uah.matcomp.mp.e3.ejerciciosclases.e8.Circle;
 
 public class Main {
     public static void main(String[] args) {
-        //Creación de objetos
-        Animal animal = new Animal ("Generic Animal");
-        Mammal mammal = new Mammal (" Generic Mammal");
-        Cat cat = new Cat ("Luli");
-        Dog dog1 = new Dog ("Buddy");
-        Dog dog2 = new Dog ("Max");
+        //Crear un objeto Circle con valores predeterminados
+        Circle circulo = new Circle();
+        System.out.println("Circulo por defecto: ");
+        System.out.println("Radio: " + circulo.getRadius() );
+        System.out.println("Color: " + circulo.getColor() );
 
-        //Probando toString()
-        System.out.println(animal.toString());
-        System.out.println(mammal.toString());
-        System.out.println(cat.toString());
-        System.out.println(dog1.toString());
+        //Crear un objeto Cylinder con valores predeterminados
+        Cylinder clilindro = new Cylinder();
+        System.out.println("Cylinder por defecto: ");
+        System.out.println("Altura: " + clilindro.getHeight() );
 
-        //Probando greets()
-        cat.greets();
-        dog1.greets();
-        dog1.greets(dog2);
-
-
+        //Calcular y mostrar el volumen del clilindro
+        System.out.printf("Volumen del cilindro: "+clilindro.getVolume());
     }
 }
