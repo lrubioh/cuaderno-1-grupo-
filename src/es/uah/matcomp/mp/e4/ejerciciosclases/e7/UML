@@ -1,0 +1,30 @@
+
+@startuml
+abstract class Animal {
+    - name: String
+    + Animal(name:String)
+    + greeting(): void
+}
+
+class Cat {
+    + Cat(name: String)
+    + greeting(): void
+}
+
+class Dog {
+    + Dog(name: String)
+    + greeting(): void
+    + greeting(Dog another): void
+}
+
+class BigDog {
+    + BigDog(name: String)
+    + greeting(): void
+    + greeting(Dog another): void
+    + greeting(another: Dog): void
+}
+
+Animal <|-- Cat
+Animal <|-- Dog
+Dog <|-- BigDog
+@enduml

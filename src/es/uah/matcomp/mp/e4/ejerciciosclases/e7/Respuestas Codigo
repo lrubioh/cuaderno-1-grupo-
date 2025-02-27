@@ -1,0 +1,12 @@
+// Salidas esperadas de la ejecución:
+// Meow!  -> Llamado desde Cat
+// Woof!  -> Llamado desde Dog
+// Woow!  -> Llamado desde BigDog
+// Meow!  -> Polimorfismo con Animal apuntando a Cat
+// Woof!  -> Polimorfismo con Animal apuntando a Dog
+// Woow!  -> Polimorfismo con Animal apuntando a BigDog
+// Woooooooooof!  -> dog2 llama a greeting(dog3)
+// Woooooowwwww!  -> dog3 (BigDog) llama a greeting(dog2)
+// Woooooooooof!  -> dog2 llama a greeting(bigDog2)
+// Woooooowwwww!  -> bigDog2 llama a greeting(dog2)
+// Woooooowwwww!  -> bigDog2 llama a greeting(bigDog1)
