@@ -1,36 +1,25 @@
-import es.uah.matcomp.mp.e4.ejerciciosclases.e4.MovableCircle;
-import es.uah.matcomp.mp.e4.ejerciciosclases.e4.MovablePoint;
+import es.uah.matcomp.mp.e4.ejerciciosclases.e5.ResizableCircle;
 
 public class Main {
     public static void main(String[] args) {
-        // Crear un MovablePoint en (0, 0) con velocidad (2, 3)
-        MovablePoint point = new MovablePoint(0, 0, 2, 3);
-        System.out.println("Punto inicial: " + point);
+        // Crear un círculo de radio 10
+        ResizableCircle resizableCircle = new ResizableCircle(10.0);
+        System.out.println("Círculo inicial: " + resizableCircle);
+        System.out.println("Área inicial: " + resizableCircle.getArea());
+        System.out.println("Perímetro inicial: " + resizableCircle.getPerimeter());
 
-        // Mover el punto en diferentes direcciones
-        point.moveUp();
-        System.out.println("Después de moveUp: " + point);
-        point.moveDown();
-        System.out.println("Después de moveDown: " + point);
-        point.moveLeft();
-        System.out.println("Después de moveLeft: " + point);
-        point.moveRight();
-        System.out.println("Después de moveRight: " + point);
+        // Redimensionar el círculo al 50%
+        resizableCircle.resize(50);
+        System.out.println("\nDespués de reducir al 50%:");
+        System.out.println("Círculo: " + resizableCircle);
+        System.out.println("Área: " + resizableCircle.getArea());
+        System.out.println("Perímetro: " + resizableCircle.getPerimeter());
 
-        System.out.println("-------------------------");
-
-        // Crear un MovableCircle con centro en (5, 5), velocidad (1, 1) y radio 10
-        MovableCircle circle = new MovableCircle(5, 5, 1, 1, 10);
-        System.out.println("Círculo inicial: " + circle);
-
-        // Mover el círculo en diferentes direcciones
-        circle.moveUp();
-        System.out.println("Después de moveUp: " + circle);
-        circle.moveDown();
-        System.out.println("Después de moveDown: " + circle);
-        circle.moveLeft();
-        System.out.println("Después de moveLeft: " + circle);
-        circle.moveRight();
-        System.out.println("Después de moveRight: " + circle);
+        // Redimensionar el círculo al 200% (doblar tamaño)
+        resizableCircle.resize(200);
+        System.out.println("\nDespués de aumentar al 200%:");
+        System.out.println("Círculo: " + resizableCircle);
+        System.out.println("Área: " + resizableCircle.getArea());
+        System.out.println("Perímetro: " + resizableCircle.getPerimeter());
     }
 }
