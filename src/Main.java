@@ -1,21 +1,21 @@
-import es.uah.matcomp.mp.e4.ejerciciosclases.e2.GeometricObject;
-import es.uah.matcomp.mp.e4.ejerciciosclases.e2.Circle;
-import es.uah.matcomp.mp.e4.ejerciciosclases.e2.Rectangle;
-
+import es.uah.matcomp.mp.e4.ejerciciosclases.e3.MovablePoint;
 public class Main {
     public static void main(String[] args) {
-        // Declaración de variables de tipo GeometricObject
-        GeometricObject circle = new Circle(5.0);
-        GeometricObject rectangle = new Rectangle(3.0, 4.0);
+        // Crear un punto en (0,0) con velocidad (2,3)
+        MovablePoint point = new MovablePoint(0, 0, 2, 3);
+        System.out.println("Posición inicial: " + point);
 
-        // Prueba de métodos en Circle
-        System.out.println(circle);
-        System.out.println("Área del círculo: " + circle.getArea());
-        System.out.println("Perímetro del círculo: " + circle.getPerimeter());
+        // Mover el punto en diferentes direcciones
+        point.moveUp();
+        System.out.println("Después de moveUp(): " + point);
 
-        // Prueba de métodos en Rectangle
-        System.out.println(rectangle);
-        System.out.println("Área del rectángulo: " + rectangle.getArea());
-        System.out.println("Perímetro del rectángulo: " + rectangle.getPerimeter());
+        point.moveDown();
+        System.out.println("Después de moveDown(): " + point);
+
+        point.moveLeft();
+        System.out.println("Después de moveLeft(): " + point);
+
+        point.moveRight();
+        System.out.println("Después de moveRight(): " + point);
     }
 }
