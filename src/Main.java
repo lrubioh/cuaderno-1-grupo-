@@ -1,25 +1,35 @@
-import es.uah.matcomp.mp.e4.ejerciciosclases.e5.ResizableCircle;
+import es.uah.matcomp.mp.e4.ejerciciosclases.e6.Animal;
+import es.uah.matcomp.mp.e4.ejerciciosclases.e6.BigDog;
+import es.uah.matcomp.mp.e4.ejerciciosclases.e6.Cat;
+import es.uah.matcomp.mp.e4.ejerciciosclases.e6.Dog;
 
 public class Main {
     public static void main(String[] args) {
-        // Crear un círculo de radio 10
-        ResizableCircle resizableCircle = new ResizableCircle(10.0);
-        System.out.println("Círculo inicial: " + resizableCircle);
-        System.out.println("Área inicial: " + resizableCircle.getArea());
-        System.out.println("Perímetro inicial: " + resizableCircle.getPerimeter());
+        // Crear instancias de cada tipo de animal
+        Animal cat = new Cat("Whiskers");
+        Animal dog = new Dog("Buddy");
+        Dog anotherDog = new Dog("Rocky");
+        BigDog bigDog = new BigDog("Thor");
+        BigDog anotherBigDog = new BigDog("Hulk");
 
-        // Redimensionar el círculo al 50%
-        resizableCircle.resize(50);
-        System.out.println("\nDespués de reducir al 50%:");
-        System.out.println("Círculo: " + resizableCircle);
-        System.out.println("Área: " + resizableCircle.getArea());
-        System.out.println("Perímetro: " + resizableCircle.getPerimeter());
+        // Prueba de saludos individuales
+        System.out.println("Saludo de Cat:");
+        cat.greets();
 
-        // Redimensionar el círculo al 200% (doblar tamaño)
-        resizableCircle.resize(200);
-        System.out.println("\nDespués de aumentar al 200%:");
-        System.out.println("Círculo: " + resizableCircle);
-        System.out.println("Área: " + resizableCircle.getArea());
-        System.out.println("Perímetro: " + resizableCircle.getPerimeter());
+        System.out.println("\nSaludo de Dog:");
+        dog.greets();
+
+        System.out.println("\nSaludo de BigDog:");
+        bigDog.greets();
+
+        // Prueba de saludos entre perros
+        System.out.println("\nDog saludando a otro Dog:");
+        ((Dog) dog).greets(anotherDog);
+
+        System.out.println("\nBigDog saludando a un Dog:");
+        bigDog.greets(anotherDog);
+
+        System.out.println("\nBigDog saludando a otro BigDog:");
+        bigDog.greets(anotherBigDog);
     }
 }
