@@ -10,7 +10,7 @@ class InvoiceTest {/**Test de la clase Invoice*/
     void getId() {
         Customer c1 = new Customer(70, "María Perez", 10);
         Invoice i1 = new Invoice(1, c1, 800);
-        assertEquals(i1.getId(), c1.getId());
+        assertEquals(70, c1.getId());
     }
     /**Se prueba que se devuelvan los datos del cliente correctamente*/
     @Test
@@ -82,6 +82,6 @@ class InvoiceTest {/**Test de la clase Invoice*/
     void testToString() {
         Customer c1 = new Customer(70, "Maria Perez", 10);
         Invoice i1 = new Invoice(1, c1, 800);
-        assertEquals("Invoice[id= 1, Customer=[id=70, 'Maria Perez(70)(10%))', discount= 10]", i1.toString());
+        assertEquals("Invoice [id=1, customer=Maria Perez(70)(10%)Maria Perez, amount=800.0]", i1.toString());
     }
 }

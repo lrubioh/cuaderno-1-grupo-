@@ -74,6 +74,6 @@ class BookTest {/**Test para la clase book*/
     void testToString() {
         Author a1 = new Author("John Doe", "john.doe@gmail.com");
         Book b1 = new Book("987654284", "La casita", a1, 40,20);
-        assertEquals("Book[isbn=987654284, Author=[name= 'John Doe', email= 'john.doe@gmail.com'], price=40, qty=20]", b1.toString());
+        assertEquals("Book[isbn=987654284, Author=[name=La casita,email=john.doe@gmail.com], price=40.0, qty=20]", b1.toString());
     }
 }

@@ -28,6 +28,6 @@ class CustomerTest {/**Test de la clase e3/Customer */
     @Test
     void testToString() {
         Customer customer = new Customer(9, "Paula Sirian", 'f');
-        assertEquals("Paula Sirian(f)", customer.toString());
+        assertEquals("Paula Sirian(9)", customer.toString());
     }
 }

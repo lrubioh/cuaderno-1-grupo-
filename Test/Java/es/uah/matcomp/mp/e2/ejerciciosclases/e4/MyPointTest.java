@@ -56,7 +56,7 @@ class MyPointTest {/**Test de la clase MyPoint*/
     @Test
     void testToString() {
         MyPoint myPoint1 = new MyPoint(4,5);
-        assertEquals(myPoint1.toString(),"{4,5}");
+        assertEquals(myPoint1.toString(),"{4, 5}");
     }
     /**Comprueba que las distancias entre los puntos sean las correctas y establecidas*/
     @Test
@@ -75,6 +75,6 @@ class MyPointTest {/**Test de la clase MyPoint*/
     void testDistance1() {
         MyPoint myPoint1 = new MyPoint(1,5);
         MyPoint myPoint2 = new MyPoint(0,0);
-        assertEquals(myPoint1.distance(myPoint2),5.0);
+        assertEquals(myPoint1.distance(myPoint2),5.0990195135927845);
     }
 }

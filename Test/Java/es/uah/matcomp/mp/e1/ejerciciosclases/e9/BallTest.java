@@ -100,6 +100,6 @@ class BallTest {
     @Test
     void testToString() {
         Ball ball = new Ball(1.1f, 2.2f, 10, 3.3f, 4.4f);
-        assertEquals("Ball [(" + ball.getX()+","+ ball.getY() + ")"+ "speed=(" + ball.getXDelta() + ","+ ball.getYDelta() +")]",ball.toString() );
+        assertEquals("Ball [(" + ball.getX()+","+ ball.getY() + ")"+ "speed=(" + ball.getXDelta() + ","+ ball.getYDelta() +")]",ball.toString());
     }
 }

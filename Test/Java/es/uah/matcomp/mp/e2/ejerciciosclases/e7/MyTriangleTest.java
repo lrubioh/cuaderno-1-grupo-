@@ -14,7 +14,7 @@ class MyTriangleTest {/**Test para comprobar la clase MyTriangle*/
         MyPoint p2 = new MyPoint(2, 3);
         MyPoint p3 = new MyPoint(4, 9);
         MyTriangle t = new MyTriangle(p1, p2, p3);
-        assertEquals("MyTriangle{p1=(1,5), p2=(2,3),p3=(4,9)}", t.toString());
+        assertEquals("MyTriangle{v1={1, 5}, v2={2, 3}, v3={4, 9}}", t.toString());
     }
     /**Se comprueba que el perimetro obtenido es el correcto*/
     @Test
@@ -23,7 +23,7 @@ class MyTriangleTest {/**Test para comprobar la clase MyTriangle*/
         MyPoint p2 = new MyPoint(2, 3);
         MyPoint p3 = new MyPoint(4, 9);
         MyTriangle t = new MyTriangle(p1, p2, p3);
-        assertEquals(13.56, t.getPerimeter());
+        assertEquals(13.56062329783655, t.getPerimeter());
     }
     /**Se comprueba que dado un triangulo definido por 3 puntos que tipo de triangulo es*/
     @Test

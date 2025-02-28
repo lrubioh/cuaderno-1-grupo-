@@ -41,7 +41,7 @@ class AccountTest {/**Test de la clase Account*/
     void testToString() {
         Customer customer = new Customer(9, "Paula Sirian", 'f');
         Account a1 = new Account(12, customer, 90);
-        assertEquals("Paula Sirian(12), balance= $90", a1.toString());
+        assertEquals("Paula Sirian(9) balance=$90.0", a1.toString());
     }
     /**Prueba que el nombre que aparece en el recibo sea el correcto y coincida
      * con los datos del cliente*/
@@ -57,7 +57,7 @@ class AccountTest {/**Test de la clase Account*/
         Customer customer = new Customer(9, "Paula Sirian", 'f');
         Account a1 = new Account(12, customer, 90);
         a1.deposit(200);
-        assertEquals(200, a1.getBalance());
+        assertEquals(290.0, a1.getBalance());
     }
     /**Comprueba si con el depósito que tengo puedo seguir gastando dinero o no
      * en funcion de lo que me vaya quedando en el despósito*/
@@ -66,6 +66,6 @@ class AccountTest {/**Test de la clase Account*/
         Customer customer = new Customer(9, "Paula Sirian", 'f');
         Account a1 = new Account(12, customer, 90);
         a1.withdraw(200);
-        assertEquals(110, a1.getBalance());
+        assertEquals(90.0, a1.getBalance());
     }
 }

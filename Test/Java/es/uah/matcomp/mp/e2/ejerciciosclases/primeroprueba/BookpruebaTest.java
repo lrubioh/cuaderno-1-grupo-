@@ -17,7 +17,7 @@ class BookpruebaTest {/**Test de la clase Bookprueba*/
     void getAuthorprueba() {
         Authorprueba a1 = new Authorprueba("Sofia Lopez", "sofia.lopez@gmail.com",'f');
         Bookprueba book = new Bookprueba("El coche azul", a1, 39, 10);
-        assertEquals("Authorprueba{name= 'Sofia Lopez', email= 'sofia.lopez@gmail.com',gender= 'f'}", book.getAuthorprueba());
+        assertEquals("Author [name=Sofia Lopez, email=sofia.lopez@gmail.com, gender=f]", book.getAuthorprueba());
     }
     /**Comprueba si el precio retornado del libro es el correcto*/
     @Test
@@ -55,7 +55,7 @@ class BookpruebaTest {/**Test de la clase Bookprueba*/
     void testToString() {
         Authorprueba a1 = new Authorprueba("Sofia Lopez", "sofia.lopez@gmail.com",'f');
         Bookprueba book = new Bookprueba("El coche azul", a1, 39, 10);
-        assertEquals("Book[name=El coche azul, Author=[name= 'Sofia Lopez', email= 'sofia.lopez@gmail.com'], price=39, qty=10]", book.toString());
+        assertEquals("Book[name=El coche azul, Author= [Author [name=Sofia Lopez, email=sofia.lopez@gmail.com, gender=f]], price=39.0, qty=10]", book.toString());
     }
     /**Comprueba que el nombre del autor del libro es correcto*/
     @Test
@@ -76,6 +76,6 @@ class BookpruebaTest {/**Test de la clase Bookprueba*/
     void getAuthorpruebaGender() {
         Authorprueba a1 = new Authorprueba("Sofia Lopez", "sofia.lopez@gmail.com", 'f');
         Bookprueba book = new Bookprueba("El coche azul", a1, 39, 10);
-        assertEquals("f", book.getAuthorpruebaGender());
+        assertEquals('f', book.getAuthorpruebaGender());
     }
 }

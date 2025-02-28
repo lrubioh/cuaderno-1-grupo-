@@ -58,9 +58,10 @@ public class Ball {
         this.yDelta = yDelta;
     }
     //mueve las coordenadas del punto sumandole a las originales los incrementos
-    public void move() {
+    public float move() {
         x += xDelta;
         y += yDelta;
+        return x;
     }
     //hace el simetrico  horizontal del xdelta
     public void reflectHorizontal(){

@@ -37,6 +37,6 @@ class AuthorpruebaTest {/**Test de la clase Authorprueba*/
     @Test
     void testToString() {
         Authorprueba a1 = new Authorprueba("Sofia Lopez", "sofia.lopez@gmail.com",'f');
-        assertEquals("Authorprueba{name= 'Sofia Lopez', email= 'sofia.lopez@gmail.com',gender= 'f'}", a1.toString());
+        assertEquals("Author [name=Sofia Lopez, email=sofia.lopez@gmail.com, gender=f]", a1.toString());
     }
 }

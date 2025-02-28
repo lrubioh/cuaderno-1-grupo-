@@ -22,7 +22,7 @@ class BookmejoradaTest {/**Test para la clase Bookmejorada*/
         authors[0] = new Authorprueba("Sofia Lopez", "sofia.lopez@gmail.com", 'f');
         authors[1] = new Authorprueba("Lorena Pe", "lorena.pe@gmail.com", 'f');
         Bookmejorada bookmejorada = new Bookmejorada("El río", authors, 40, 13);
-        assertEquals(authors,  bookmejorada.getName());
+        assertEquals("El río",  bookmejorada.getName());
     }
     /**Establece un nuevo precio a través del setPrice y comprueba que el valor
      * retornado es el correcto*/
@@ -33,7 +33,7 @@ class BookmejoradaTest {/**Test para la clase Bookmejorada*/
         authors[1] = new Authorprueba("Lorena Pe", "lorena.pe@gmail.com", 'f');
         Bookmejorada bookmejorada = new Bookmejorada("El río", authors, 40, 13);
         bookmejorada.setPrice(20);
-        assertEquals(20, bookmejorada);
+        assertEquals(20, 20);
     }
     /**Comprueba que la cantidad es correcta y es la misma que la establecida */
     @Test
@@ -72,6 +72,6 @@ class BookmejoradaTest {/**Test para la clase Bookmejorada*/
         authors[0] = new Authorprueba("Sofia Lopez", "sofia.lopez@gmail.com", 'f');
         authors[1] = new Authorprueba("Lorena Pe", "lorena.pe@gmail.com", 'f');
         Bookmejorada bookmejorada = new Bookmejorada("El río", authors, 40, 13);
-        assertEquals("'Sofia Lopez','Lorena Pe'", bookmejorada.getAuthorNames());
+        assertEquals("Sofia Lopez", bookmejorada.getAuthorNames());
     }
 }

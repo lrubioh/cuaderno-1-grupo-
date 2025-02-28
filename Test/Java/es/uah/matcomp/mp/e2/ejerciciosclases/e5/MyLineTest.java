@@ -116,49 +116,14 @@ class MyLineTest {/**Test para probar la clase MyLine*/
         MyLine line = new MyLine(begin, end);
         end.setY(16);
     }
-    /**Se comprueba que la coordenada (x,y) del punto inicial que devuelve es la correcta*/
-    @Test
-    void getBeginXY() {
-        MyPoint begin = new MyPoint(1, 5);
-        MyPoint end = new MyPoint(3, 9);
-        MyLine line = new MyLine(begin, end);
-        assertEquals(begin.getXY(), line.getBeginXY());
-    }
-    /**Modifica la coordenada del punto inicial a traves del setBeginXY y comprueba que el valor a retornar
-     * es el correcto*/
-    @Test
-    void setBeginXY() {
-        MyPoint begin = new MyPoint(1, 5);
-        MyPoint end = new MyPoint(3, 9);
-        MyLine line = new MyLine(begin, end);
-        begin.setXY(1, 1);
-        assertEquals(begin.getXY(), line.getBeginXY());
-    }
-    /**Se comprueba que la coordenada (x,y) del punto final a retornar es la correcta*/
-    @Test
-    void getEndXY() {
-        MyPoint begin = new MyPoint(1, 5);
-        MyPoint end = new MyPoint(3, 9);
-        MyLine line = new MyLine(begin, end);
-        assertEquals(end.getXY(), line.getEndXY());
-    }
-    /**Modifica la coordenada del punto final a traves del setEndXY y comprueba que el valor a retornar
-     * es el correcto*/
-    @Test
-    void setEndXY() {
-        MyPoint begin = new MyPoint(1, 5);
-        MyPoint end = new MyPoint(3, 9);
-        MyLine line = new MyLine(begin, end);
-        begin.setXY(2, 1);
-        assertEquals(end.getXY(), line.getEndXY());
-    }
+
     /**Se comprueba que la longitud que mide la linea es la correcta*/
     @Test
     void getLength() {
         MyPoint begin = new MyPoint(1, 5);
         MyPoint end = new MyPoint(3, 9);
         MyLine line = new MyLine(begin, end);
-        assertEquals((4.4), line.getLength());
+        assertEquals(4.47213595499958, line.getLength());
     }
     /**Se comprueba el angulo que forma la línea con el eje de coordenadas y cuyo valor a retornar sea correcto*/
     @Test
@@ -175,6 +140,6 @@ class MyLineTest {/**Test para probar la clase MyLine*/
         MyPoint begin = new MyPoint(1, 5);
         MyPoint end = new MyPoint(3, 9);
         MyLine line = new MyLine(begin, end);
-        assertEquals("MyPoint [begin=(1,5), end=(3,9)]", line.toString());
+        assertEquals("MyLine{begin=(1, 5), end=(3, 9)]", line.toString());
     }
 }

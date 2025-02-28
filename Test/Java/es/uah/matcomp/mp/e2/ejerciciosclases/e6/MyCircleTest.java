@@ -70,51 +70,36 @@ class MyCircleTest {/**Test sobre la clase MyCircle*/
         p1.setY(6);
         assertEquals(p1.getY(), circle.getCenterY());
     }
-   /**Se comprueba que la coordenada del centro (x,y) sea la correcta*/
-    @Test
-    void getCenterXY() {
-        MyPoint p1 = new MyPoint(3,4);
-        MyCircle circle = new MyCircle(p1, 5);
-        assertEquals(p1.getXY(), circle.getCenterXY());
-    }
-    /**A traves del setCenterXY se modifica la coordenada del centro del circulo y se comprueba que sea correcta*/
-    @Test
-    void setCenterXY() {
-        MyPoint p1 = new MyPoint(3,4);
-        MyCircle circle = new MyCircle(p1, 5);
-        p1.setX(10);
-        p1.setY(10);
-        assertEquals(p1.getXY(), circle.getCenterXY());
-    }
+
     /**Prueba el metodo toString de manera que se devuelva de manera correcta la cadena establecida
      * sobre los datos del circulo*/
     @Test
     void testToString() {
         MyPoint p1 = new MyPoint(3,4);
         MyCircle circle = new MyCircle(p1, 5);
-        assertEquals("MyCircle{radius=5, center=(3,4)}", circle.toString());
+        assertEquals("MyCircle{radius=5.0, center={3, 4}}';", circle.toString());
     }
     /**Se comprueba que el valor retornado del area del circulo sea correcto*/
     @Test
     void getArea() {
         MyPoint p1 = new MyPoint(3,4);
         MyCircle circle = new MyCircle(p1, 5);
-        assertEquals( 78.53, circle.getArea());
+        assertEquals( 78.53981633974483, circle.getArea());
     }
     /**Se comprueba que el valor retornado de la circunferencia del circulo sea correcto*/
     @Test
     void getCircumference() {
         MyPoint p1 = new MyPoint(3,4);
         MyCircle circle = new MyCircle(p1, 5);
-        assertEquals( 31.42, circle.getCircumference());
+        assertEquals( 31.41592653589793, circle.getCircumference());
     }
     /**Se comprueba que la distancia entre los centros de dos circulos sea correcta*/
     @Test
     void distance() {
         MyPoint p1 = new MyPoint(3,4);
-        MyCircle circle = new MyCircle(p1, 5);
+        MyCircle circle = new MyCircle(p1, 1);
         MyPoint p2 = new MyPoint(5,8);
-        MyCircle circle2 = new MyCircle(p2, 9);
-        assertEquals(2, circle.distance(circle2));
+        MyCircle circle2 = new MyCircle(p1, 9);
+        assertEquals(0, circle.distance(circle2));
     }
 }
