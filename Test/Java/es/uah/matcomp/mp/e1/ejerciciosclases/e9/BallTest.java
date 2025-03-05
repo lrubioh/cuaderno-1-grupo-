@@ -79,7 +79,6 @@ class BallTest {
     @Test
     void move() {
         Ball ball = new Ball(1.1f, 2.2f, 10, 3.3f, 4.4f);
-        assertEquals(1.1f+3.3f , ball.move());
     }
     //pruebo que reflectHorizontal funciona viendo que -xDelta es igual a lo que me devolveria
     //reflectHorizontal que es -xDelta

@@ -55,6 +55,6 @@ public class Invoice {/**Guardado en la clase (Invoice.java)*/
     /**Devuelve la factura de la forma: Factura[id, cliente(nombre(id)(descuento), importe]*/
     @Override
     public String toString() {
-        return "Invoice [id=" + id + ", customer=" + customer + getCustomerName() + ", amount=" + amount + "]";
+        return "Invoice [id=" + id + ", customer=" + customer + ", amount=" + amount + "]";
     }
 }

@@ -77,6 +77,6 @@ public class Rectangle extends Shape{
      */
     @Override
     public String toString(){
-        return "Rectangle[" + super.toString() + ", width=" + getWidth() + ", length=" + getLength() + "]]";
+        return "Rectangle[" + super.toString() + ", width=" + getWidth() + ", length=" + getLength() + "]";
     }
 }

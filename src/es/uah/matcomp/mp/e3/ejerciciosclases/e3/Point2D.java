@@ -59,7 +59,6 @@ public class Point2D {
 
     /**
      * Método para obtener un array con los valores x e y
-     * @return
      */
     public float[] getXY() {
         return new float[] {x, y};

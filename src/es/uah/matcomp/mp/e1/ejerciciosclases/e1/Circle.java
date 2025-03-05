@@ -8,7 +8,7 @@ public class Circle {
         //DECLARO LOS MÉTODOS PÚBLICOS
         //construye un circulo por defecto con los datos privados (radio y el color)
         public Circle(){
-            radius =1;
+            radius = 1;
             color="red";
         }
 

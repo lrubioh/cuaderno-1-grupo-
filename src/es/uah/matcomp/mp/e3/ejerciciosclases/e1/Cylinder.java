@@ -19,7 +19,7 @@ public class Cylinder extends Circle { // Save as "Cylinder.java"
     }
     /** Constructor with default color, but given radius, height */
     public Cylinder(double radius, double height) {
-        super(radius); // call superclass constructor Circle(r)
+        super(radius,"red"); // call superclass constructor Circle(r)
         this.height = height;
     }
 
@@ -36,7 +36,6 @@ public class Cylinder extends Circle { // Save as "Cylinder.java"
 
     @Override
     public String toString() { // in Cylinder class
-        return "Cylinder: subclass of " + super.toString() // use Circle's toString()
-                + " height=" + height;
+        return "Cylinder: subclass of " + super.toString() + " height=" + height;
     }
 }
